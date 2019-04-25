@@ -25,8 +25,10 @@ class Landing extends React.Component{
   }
 
   render(){
-    this.items = this.state.images.map((item, key) =>
-    <img key={item.id} src={item.urls.thumb} />
+    this.thumbnails = this.state.images.map((item, key) =>
+      <div className="img">
+        <img key={item.id} src={item.urls.thumb} />
+      </div>
     );
     // const imageUrls = this.state.images.map(image =>
     //   <div key={image.id}>
@@ -35,14 +37,20 @@ class Landing extends React.Component{
     //   </div>
     // )
     return(
-      <ul>{this.items}</ul>
+      <div class="wrap">
+         <div className='nav'>
+             <div className="container">
+                <img src={require("../img/logo.png")}/>
+             </div>
+       </div>
+      <div class="redish pad">
+        <div className="blueish container gallery">{this.thumbnails}</div>
+      </div>
+      <div class="redish pad">
+        <div className="blueish container">pagination</div>
+      </div>
+      </div>
       // <div>
-      //   <div className='nav'>
-      //     <img
-      //       src={require("../img/logo.png")}
-      //       style={{ width: 100 }}
-      //     />
-      //   </div>
       //   <div className='slider'>
       //     <Carousel infiniteLoop useKeyboardArrows autoPlay showThumbs={false}>
       //       {imageUrls}
