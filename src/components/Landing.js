@@ -27,7 +27,9 @@ class Landing extends React.Component{
   render(){
     this.thumbnails = this.state.images.map((item, key) =>
       <div className="img">
-        <img key={item.id} src={item.urls.thumb} />
+        <a href={item.links.download} target="_blank">
+          <img key={item.id} src={item.urls.thumb} />
+        </a>
       </div>
     );
     // const imageUrls = this.state.images.map(image =>
@@ -43,11 +45,11 @@ class Landing extends React.Component{
                 <img src={require("../img/logo.png")}/>
              </div>
        </div>
-      <div class="redish pad">
-        <div className="blueish container gallery">{this.thumbnails}</div>
+      <div class="pad">
+        <div className="container gallery">{this.thumbnails}</div>
       </div>
-      <div class="redish pad">
-        <div className="blueish container">pagination</div>
+      <div class="pad">
+        <div className="container">pagination</div>
       </div>
       </div>
       // <div>
