@@ -12,6 +12,7 @@ class Landing extends React.Component{
   }
 
   async componentDidMount() {
+    console.log('did ount');
     await axios.get('https://api.unsplash.com/photos',{
       headers:{
         Authorization : `Client-ID ${clientId}`
@@ -24,30 +25,35 @@ class Landing extends React.Component{
   }
 
   render(){
-    const imageUrls = this.state.images.map(image =>
-      <div key={image.id}>
-          <img src={image.urls.small} />
-          <p className="legend">talanta mtaani</p>
-      </div>
-    )
-    return(
-      <div>
-        <div className='nav'>
-          <img
-            src={require("../img/logo.png")}
-            style={{ width: 100 }}
-          />
-        </div>
-        <div className='slider'>
-          <Carousel infiniteLoop useKeyboardArrows autoPlay showThumbs={false}>
-            {imageUrls}
-           </Carousel>
-        </div>
-        <div>
-          <ImageCards images={this.state.images} />
-        </div>
-      </div>
+    this.items = this.state.images.map((item, key) =>
+    <img key={item.id} src={item.urls.thumb} />
     );
+    // const imageUrls = this.state.images.map(image =>
+    //   <div key={image.id}>
+    //       <img src={image.urls.small} />
+    //       <p className="legend">talanta mtaani</p>
+    //   </div>
+    // )
+    return(
+      <ul>{this.items}</ul>
+      // <div>
+      //   <div className='nav'>
+      //     <img
+      //       src={require("../img/logo.png")}
+      //       style={{ width: 100 }}
+      //     />
+      //   </div>
+      //   <div className='slider'>
+      //     <Carousel infiniteLoop useKeyboardArrows autoPlay showThumbs={false}>
+      //       {imageUrls}
+      //      </Carousel>
+      //   </div>
+      //   <div>
+      //     <ImageCards images={this.state.images} />
+      //   </div>
+      // </div>
+    );
+    return "nay"
   }
 }
 export default Landing;
