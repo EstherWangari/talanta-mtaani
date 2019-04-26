@@ -1,28 +1,50 @@
-/* body{}
-.slider{
 
-}
-.slider p{
-  text-align: center;
-  text-transform: uppercase;
-}
-.card{
-  height: 200px;
-  background: yellow;
-  width:20%
-} */
 .redish{border:dashed 1px red}
 .blueish{border:dashed 1px blue}
 html,body{padding:0;margin:0}
 .container{display:block;width:100%;margin:0 auto}
 .nav{background:black;height:50px;padding:10px 15px;margin-bottom:10px}
 .nav img{height:50px;}
-.pad{padding-left:15px;padding-right:15px}
+.pad{}
+.container{width:80%}
 .gallery{display:grid;grid-gap:10px;grid-template-columns:repeat(auto-fill, minmax(150px,1fr));}
 .gallery .img{height:150px;background:#dadada;overflow:hidden;border-radius:4px;padding:5px;transition:all .2s}
 .gallery .img img{width:100%;max-height:150px}
 .gallery .img:hover{box-shadow:0px 0px 15px rgba(0,0,0,.5)}
+.pagination{
+  margin-top: 20px
+}
+.pagination a{
+  padding-right: 15px;
+  font-size: 20px;
+  font-weight: 600;
+  color:red;
+  text-decoration: none;
+}
+.pagination a:hover{
+  color:purple;
+  text-decoration: underline;  
+}
+.green{
+  margin-bottom: 20px;
+}
+.green img {
+  max-width: 100%;
+}
+.slidetext{
+  padding-top: 80px;
+  font-size: 2.0rem;
+  font-style: italic;
+}
+.carousel .slide{
+  background-color:#DBFF80;
+  height: 350px;
+}
+.carousel .slide img{
+  max-width: 35%;
+}
 
+.card{display: none}
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
