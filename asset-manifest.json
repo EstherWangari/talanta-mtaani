@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/github.io/talanta-mtaani/static/css/main.6b477bec.chunk.css",
-    "main.js": "/github.io/talanta-mtaani/static/js/main.71fa0f08.chunk.js",
-    "main.js.map": "/github.io/talanta-mtaani/static/js/main.71fa0f08.chunk.js.map",
+    "main.css": "/github.io/talanta-mtaani/static/css/main.9556e23e.chunk.css",
+    "main.js": "/github.io/talanta-mtaani/static/js/main.f28c0b0e.chunk.js",
+    "main.js.map": "/github.io/talanta-mtaani/static/js/main.f28c0b0e.chunk.js.map",
     "runtime~main.js": "/github.io/talanta-mtaani/static/js/runtime~main.f7b0aadf.js",
     "runtime~main.js.map": "/github.io/talanta-mtaani/static/js/runtime~main.f7b0aadf.js.map",
-    "static/js/2.eda71072.chunk.js": "/github.io/talanta-mtaani/static/js/2.eda71072.chunk.js",
-    "static/js/2.eda71072.chunk.js.map": "/github.io/talanta-mtaani/static/js/2.eda71072.chunk.js.map",
+    "static/js/2.aad07db2.chunk.js": "/github.io/talanta-mtaani/static/js/2.aad07db2.chunk.js",
+    "static/js/2.aad07db2.chunk.js.map": "/github.io/talanta-mtaani/static/js/2.aad07db2.chunk.js.map",
     "index.html": "/github.io/talanta-mtaani/index.html",
-    "precache-manifest.7e668cd63df31b9351744f3be6fe3078.js": "/github.io/talanta-mtaani/precache-manifest.7e668cd63df31b9351744f3be6fe3078.js",
+    "precache-manifest.55a9ab919c4bd0d38f8757b83042ccdc.js": "/github.io/talanta-mtaani/precache-manifest.55a9ab919c4bd0d38f8757b83042ccdc.js",
     "service-worker.js": "/github.io/talanta-mtaani/service-worker.js",
-    "static/css/main.6b477bec.chunk.css.map": "/github.io/talanta-mtaani/static/css/main.6b477bec.chunk.css.map"
+    "static/css/main.9556e23e.chunk.css.map": "/github.io/talanta-mtaani/static/css/main.9556e23e.chunk.css.map",
+    "static/media/App.css": "/github.io/talanta-mtaani/static/media/fm.314a644d.jpg"
   }
 }

@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.0/workbox-sw.js");
 
 importScripts(
-  "/github.io/talanta-mtaani/precache-manifest.7e668cd63df31b9351744f3be6fe3078.js"
+  "/github.io/talanta-mtaani/precache-manifest.55a9ab919c4bd0d38f8757b83042ccdc.js"
 );
 
 self.addEventListener('message', (event) => {
