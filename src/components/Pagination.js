@@ -6,8 +6,8 @@ class Pagination extends React.Component{
     return(
       <center className='pagination'>
         <Link to='/'>1</Link>
-        <Link to=''>2</Link>
-        <Link to=''>3</Link>
+        <Link to='/page-two'>2</Link>
+        <Link to='/page-three'>3</Link>
         <Link><i class="fas fa-arrow-right"></i></Link>
       </center>
     );

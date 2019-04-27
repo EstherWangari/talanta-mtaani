@@ -42,6 +42,10 @@ class Landing extends React.Component{
               <img src={require("../img/logo.png")}/>
             </div>
           </div>
+          <div class='background'>
+           <div className='first'>TALANTA</div>
+          <div className='second'>MTAANI</div>
+          </div>
           <div class="pad">
             <div className="container gallery">{this.thumbnails}</div>
           </div>

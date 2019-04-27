@@ -1,16 +1,67 @@
 
 .redish{border:dashed 1px red}
 .blueish{border:dashed 1px blue}
-html,body{padding:0;margin:0}
-.container{display:block;width:100%;margin:0 auto}
-.nav{background:black;height:50px;padding:10px 15px;margin-bottom:10px}
-.nav img{height:50px;}
-.pad{}
-.container{width:80%}
-.gallery{display:grid;grid-gap:10px;grid-template-columns:repeat(auto-fill, minmax(150px,1fr));}
-.gallery .img{height:150px;background:#dadada;overflow:hidden;border-radius:4px;padding:5px;transition:all .2s}
-.gallery .img img{width:100%;max-height:150px}
-.gallery .img:hover{box-shadow:0px 0px 15px rgba(0,0,0,.5)}
+html,body{
+  padding:0;
+  margin:0
+}
+.container{
+  display:block;
+  width:100%;
+  margin:0 auto
+}
+.nav{
+  background:black;
+  height:50px;
+  padding:10px 15px;
+  margin-bottom:2px
+}
+.nav img{
+  height:50px;
+}
+.background{
+  background-image: url(../img/fm.jpg);
+  background-size: cover;
+  height:400px;
+  background-repeat: no-repeat;
+  display: flex;
+  color: red;
+  padding-top: 180px;
+  font-size: 70px;
+  font-weight: 600;
+  font-family: 'Gugi', cursive;
+}
+.background .second{
+  padding-left: 800px
+}
+.background .first{
+padding-left: 50px;
+}
+.pad{
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 10px;
+}
+.gallery{
+  display:grid;
+  grid-gap:10px;
+  grid-template-columns:repeat(auto-fill, minmax(150px,1fr));
+}
+.gallery .img{
+  height:150px;
+  background:#dadada;
+  overflow:hidden;
+  border-radius:4px;
+  padding:5px;
+  transition:all .2s
+}
+.gallery .img img{
+  width:100%;
+  max-height:150px
+}
+.gallery .img:hover{
+  box-shadow:0px 0px 15px rgba(0,0,0,.5)
+}
 .pagination{
   margin-top: 20px
 }
@@ -23,30 +74,12 @@ html,body{padding:0;margin:0}
 }
 .pagination a:hover{
   color:purple;
-  text-decoration: underline;  
+  text-decoration: underline;
 }
-.green{
-  margin-bottom: 20px;
-}
-.green img {
-  max-width: 100%;
-}
-.slidetext{
-  padding-top: 80px;
-  font-size: 2.0rem;
-  font-style: italic;
-}
-.carousel .slide{
-  background-color:#DBFF80;
-  height: 350px;
-}
-.carousel .slide img{
-  max-width: 35%;
-}
-
-.card{display: none}
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-.container{width:60%}
+  .container{
+  width:60%;}
+  
 }
