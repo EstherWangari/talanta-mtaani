@@ -4,12 +4,17 @@ import { Link } from 'react-router-dom';
 class Pagination extends React.Component{
   render(){
     return(
-      <center className='pagination'>
-        <Link to='/'>1</Link>
-        <Link to='/page-two'>2</Link>
-        <Link to='/page-three'>3</Link>
-        <Link><i class="fas fa-arrow-right"></i></Link>
-      </center>
+      <div class="pad">
+      <div className="container pad mg">
+        <center className='pagination'>
+        <p>{this.state.loading}</p>
+        if(true){
+        <a onClick={this.loadNextPage} className="button">Next</a> 
+        }
+        <a onClick={this.loadNextPage} className="button">Next</a> 
+        </center>
+      </div>
+    </div>
     );
   }
 }

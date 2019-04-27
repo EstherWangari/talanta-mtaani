@@ -9,34 +9,55 @@ const clientId = 'a2356c85ce9291dd44b732ab883c4b18b36537923e6587a95a8e73bb7c9b1c
 
 class Landing extends React.Component {
   state = {
-    images: []
+    images: [],
+    currentPage: 1,
+    loading:''
   }
 
-  async componentDidMount() {
-    console.log('did ount');
-    await axios.get('https://api.unsplash.com/photos', {
+  constructor(props) {
+    super(props);
+    this.loadNextPage = this.loadNextPage.bind(this);
+  }
+
+
+  componentDidMount() {
+    this.loadImages();
+    // console.log(response.data.results);
+  }
+
+  async loadImages(){
+    await axios.get('https://api.unsplash.com/photos?page='+this.state.currentPage, {
       headers: {
         Authorization: `Client-ID ${clientId}`
       },
     }).then(res => {
-      console.log(res.data)
-      this.setState({ images: res.data })
+      //console.log(res.data)
+      this.setState({ images: res.data, loading:'' })
     }).catch(err => console.log(err.response));
-    // console.log(response.data.results);
   }
+
+  loadNextPage(){
+    this.setState({ 
+      currentPage: this.state.currentPage+1,
+      loading: 'Loading Page '+ (this.state.currentPage+1)+' ... '
+    });
+    this.loadImages();
+  }
+
 
   render() {
     this.thumbnails = this.state.images.map((item, key) =>
-      <div className="img">
+      <div className="img" key={item.id}>
         <a href={item.links.download} target="_blank">
           <img key={item.id} src={item.urls.thumb} />
         </a>
       </div>
     );
 
+
     return (
       <div>
-        <div class="wrap">
+        <div className="wrap">
           <div className='nav'>
             <div className="container">
               <img src={require("../img/logo.png")} />
@@ -49,17 +70,21 @@ class Landing extends React.Component {
             </div>
           </div>
           <div class="pad">
+            <div className="container"><h2>Page: {this.state.currentPage}</h2></div>
             <div className="container gallery">{this.thumbnails}</div>
           </div>
           <div class="pad">
-            <div className="container">
-              <Pagination />
+            <div className="container pad mg">
+              <center className='pagination'>
+              <p>{this.state.loading}</p>
+              <a onClick={this.loadNextPage} className="button">Next</a> 
+              </center>
             </div>
           </div>
         </div>
       </div>
     );
-    return "nay"
   }
 }
 export default Landing;
+
