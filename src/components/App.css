@@ -19,24 +19,11 @@ html,body{
 .nav img{
   height:50px;
 }
-.background{
-  background-image: url(../img/fm.jpg);
-  background-size: cover;
-  height:400px;
-  background-repeat: no-repeat;
-  display: flex;
-  color: red;
-  padding-top: 180px;
-  font-size: 70px;
-  font-weight: 600;
-  font-family: 'Gugi', cursive;
-}
-.background .second{
-  padding-left: 800px
-}
-.background .first{
-padding-left: 50px;
-}
+.background{background:black}
+.background .container{display:grid;grid-template-columns:60% 40%}
+.background h2{font-family: 'Gugi', cursive;color:red}
+.background img{width:100%;}
+.center-cont{display:grid;align-content:center}
 .pad{
   padding-left: 15px;
   padding-right: 15px;

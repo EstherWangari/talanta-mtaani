@@ -7,16 +7,16 @@ import './App.css'
 
 const clientId = 'a2356c85ce9291dd44b732ab883c4b18b36537923e6587a95a8e73bb7c9b1c46';
 
-class Landing extends React.Component{
+class Landing extends React.Component {
   state = {
     images: []
   }
 
   async componentDidMount() {
     console.log('did ount');
-    await axios.get('https://api.unsplash.com/photos',{
-      headers:{
-        Authorization : `Client-ID ${clientId}`
+    await axios.get('https://api.unsplash.com/photos', {
+      headers: {
+        Authorization: `Client-ID ${clientId}`
       },
     }).then(res => {
       console.log(res.data)
@@ -25,7 +25,7 @@ class Landing extends React.Component{
     // console.log(response.data.results);
   }
 
-  render(){
+  render() {
     this.thumbnails = this.state.images.map((item, key) =>
       <div className="img">
         <a href={item.links.download} target="_blank">
@@ -34,17 +34,19 @@ class Landing extends React.Component{
       </div>
     );
 
-    return(
+    return (
       <div>
         <div class="wrap">
           <div className='nav'>
             <div className="container">
-              <img src={require("../img/logo.png")}/>
+              <img src={require("../img/logo.png")} />
             </div>
           </div>
-          <div class='background'>
-           <div className='first'>TALANTA</div>
-          <div className='second'>MTAANI</div>
+          <div className='background'>
+            <div className="container">
+              <div><img src={require("../img/fm.jpg")} /></div>
+              <div className="center-cont"><h2>TALANTA MTAANI</h2></div>
+            </div>
           </div>
           <div class="pad">
             <div className="container gallery">{this.thumbnails}</div>
